@@ -1,0 +1,53 @@
+// * general mixins
+
+// * grid
+@mixin center-div {
+  display: grid;
+  place-items: center;
+}
+
+// * flex row
+@mixin flex-row($align: center, $justify: space-between) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+@mixin flex-col($align: center, $justify: space-between) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: column;
+}
+
+// * position
+@mixin pos-ab-t-l($top: 0, $left: 0) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+@mixin pos-ab-t-r($top: 0, $right: 0) {
+  position: absolute;
+  top: $top;
+  right: $right;
+}
+@mixin pos-ab-b-l($bottom: 0, $left: 0) {
+  position: absolute;
+  bottom: $bottom;
+  left: $left;
+}
+@mixin pos-ab-b-r($top: 0, $right: 0) {
+  position: absolute;
+  top: $top;
+  right: $right;
+}
+// * element size
+@mixin size($height: 100%, $width: 100%) {
+  height: $height;
+  width: $width;
+}
+// * specific mixins
+@mixin btn($border, $clr, $bg) {
+  background: $bg;
+  border: $border;
+  color: $clr;
+}

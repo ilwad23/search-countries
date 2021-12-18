@@ -1,0 +1,11 @@
+@use "sass:math" as m;
+//  GENERAL FUNCTIONS
+@function rem($px:16, $div: 16) {
+  @return (m.div($px, $div)) * 1rem;
+}
+@function v($px: 16, $width: 1440) {
+  $vw: m.div($width, 100);
+  $res1: m.floor(m.div($px, $vw));
+  // @return $px * 1px;
+  @return calc(($res1 * 1vw) + rem($px - ($res1 * $vw)));
+}
