@@ -1,3 +1,4 @@
+@use "./functions";
 // * general mixins
 
 // * grid
@@ -46,8 +47,14 @@
   width: $width;
 }
 // * specific mixins
-@mixin btn($border, $clr, $bg) {
-  background: $bg;
-  border: $border;
-  color: $clr;
+@mixin container {
+  // width: v(12/8);
+  margin: 0 auto;
+  padding-right: 80px;
+  padding-left: 80px;
+}
+@mixin border($start:5px) {
+  border-end-end-radius: 5px;
+  border-start-start-radius: $start;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.26);
 }
