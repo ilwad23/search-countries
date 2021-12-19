@@ -1,6 +1,9 @@
 import Head from "next/head";
 import "../styles/globals.scss";
+import reducer, { initialState } from "../states/reducer";
+import { StateProvider } from "../states/StateProvider";
 
+import Layout from "../components/Layout";
 function MyApp({ Component, pageProps }) {
   return (
     <>
@@ -12,7 +15,11 @@ function MyApp({ Component, pageProps }) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Component {...pageProps} />
+      <StateProvider initialState={initialState} reducer={reducer}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </StateProvider>
     </>
   );
 }
