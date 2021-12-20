@@ -1,0 +1,74 @@
+@use "../util" as *;
+$height: v(55);
+.tools {
+  @include flex(flex-start);
+  @include font-home-para;
+  margin-top: $height;
+  height: $height;
+  z-index: 111;
+  ::placeholder {
+    color: var(--input);
+  }
+}
+.input {
+  @include element;
+  @include flex($justify: flex-end, $dir: row-reverse);
+  @include size($height, v(479));
+  color: var(--input);
+  &__icon {
+    @include size(rem(17), rem(17));
+    margin-left: v(30);
+    margin-right: v(25);
+    .input__field:hover + &,
+    .input__field:focus + &,
+    .input__field:active + & {
+      color: var(--text);
+    }
+  }
+  .input__field {
+    background-color: transparent;
+    flex: 1;
+    @include size($height: 100%);
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--text);
+    }
+  }
+}
+.selector {
+  @include element;
+  @include flex($justify: space-around);
+  @include size($height, 199px);
+  &__para {
+    flex: 1;
+    margin-left: 25px;
+  }
+  &__icon {
+    @include size(rem(14), rem(14));
+    margin-right: 15px;
+  }
+}
+.list {
+  @include element;
+  @include size(172px, 199px);
+  display: none;
+  margin-top: 6px;
+  padding: 25px 15px;
+  .filter:hover &,
+  .filter:focus &,
+  .filter:active & {
+    display: block;
+  }
+  &__para {
+    width: 100%;
+    & + li {
+      margin-top: 10px;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      font-weight: 600;
+    }
+  }
+}

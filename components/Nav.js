@@ -1,7 +1,7 @@
 import React from "react";
 import { SunIcon, MoonIcon } from "@heroicons/react/outline";
 import { useStateValue } from "../states/StateProvider";
-import NavStyles from "../styles/Nav.module.scss";
+import NavStyles from "../styles/components/Nav.module.scss";
 function Nav() {
   const [{ toggle }, dispatch] = useStateValue();
   return (

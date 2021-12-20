@@ -13,6 +13,13 @@ function MyApp({ Component, pageProps }) {
           name="description"
           content="app that helps see and search for countries"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com"  />
+        {/*  eslint-disable-next-line @next/next/no-page-custom-font */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap"
+          rel="stylesheet"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <StateProvider initialState={initialState} reducer={reducer}>

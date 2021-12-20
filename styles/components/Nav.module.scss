@@ -1,7 +1,4 @@
-@use "./util" as *;
-// * light
-$element: white;
-$text: hsl(209, 23%, 22%);
+@use "../util" as *;
 .nav {
   background-color: var(--element);
   color: var(--text);
@@ -10,11 +7,11 @@ $text: hsl(209, 23%, 22%);
   top: 0;
   @include border(0);
   @include container;
-  @include flex-row;
+  @include flex;
   &__toggleContainer {
     border-radius: 100px;
     padding: 10px 20px;
-    @include flex-row;
+    @include flex;
     &:hover,
     &:focus,
     &:active {
@@ -31,11 +28,11 @@ $text: hsl(209, 23%, 22%);
     width: v(14);
   }
   &__strongText {
-    font-size: 23;
+    font-size: 23px;
     font-weight: 900;
   }
   &__lightText {
-    font-size: 14;
+    font-size: 14px;
     font-weight: 300;
   }
 }

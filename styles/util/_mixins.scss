@@ -8,18 +8,12 @@
 }
 
 // * flex row
-@mixin flex-row($align: center, $justify: space-between) {
+@mixin flex($align: center, $justify: space-between, $dir: row) {
   display: flex;
   align-items: $align;
   justify-content: $justify;
+  flex-direction: $dir;
 }
-@mixin flex-col($align: center, $justify: space-between) {
-  display: flex;
-  align-items: $align;
-  justify-content: $justify;
-  flex-direction: column;
-}
-
 // * position
 @mixin pos-ab-t-l($top: 0, $left: 0) {
   position: absolute;
@@ -53,8 +47,20 @@
   padding-right: 80px;
   padding-left: 80px;
 }
-@mixin border($start:5px) {
+@mixin border($start: 5px) {
   border-end-end-radius: 5px;
   border-start-start-radius: $start;
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.26);
+}
+
+@mixin font-home-para {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+@mixin element {
+    background-color: var(--element);
+  color: var(--text);
+  @include border;
 }

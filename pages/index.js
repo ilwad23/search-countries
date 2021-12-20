@@ -1,6 +1,9 @@
+import Tools from "../components/Tools";
+
 export default function Home({ countries }) {
   return (
     <div className="home">
+      <Tools/>
     </div>
   );
 }
