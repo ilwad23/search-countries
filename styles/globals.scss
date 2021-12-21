@@ -24,6 +24,10 @@ body {
 }
 .main {
   padding-right: 15;
-  @include container;
+  @include container(v(80));
   @include font-home-para;
+  @include small-screen {
+    @include container(v(30));
+    
+  }
 }

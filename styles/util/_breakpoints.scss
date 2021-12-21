@@ -26,3 +26,8 @@
     @content;
   }
 }
+@mixin small-screen {
+  @media all and (max-width: 750px) {
+    @content;
+  }
+}

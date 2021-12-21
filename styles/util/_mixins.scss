@@ -41,10 +41,10 @@
   width: $width;
 }
 // * specific mixins
-@mixin container {
+@mixin container($px:80px) {
   margin: 0 auto;
-  padding-right: 80px;
-  padding-left: 80px;
+  padding-right: $px;
+  padding-left: $px;
 }
 @mixin border($start: 5px) {
   border-end-end-radius: 5px;

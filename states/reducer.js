@@ -8,14 +8,18 @@ export const initialState = {
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "setCountries":
-    let filteredCountries = action.countries;  
-    if (state.filterValue){
-         filteredCountries = filteredCountries.filter(country =>country.region==state.filterValue)
+    case "setCountriesHome":
+      let filteredCountries = action.countries;
+      if (state.filterValue) {
+        filteredCountries = filteredCountries.filter(
+          (country) => country.region == state.filterValue
+        );
       }
-      filteredCountries = filteredCountries.filter(country => country.name.toLowerCase().startsWith( state.inputValue.toLowerCase()))
+      filteredCountries = filteredCountries.filter((country) =>
+        country.name.toLowerCase().startsWith(state.inputValue.toLowerCase())
+      );
       const counties = filteredCountries
-        .filter((v, i) => i < 50)
+        .filter((v, i) => i < 12)
         .map((v) => ({
           flag: v.flag,
           countryName: v.name,
@@ -23,7 +27,6 @@ const reducer = (state, action) => {
           region: v.region,
           capital: v.capital,
         }));
-      console.log(counties);
       return {
         ...state,
         countries: counties,

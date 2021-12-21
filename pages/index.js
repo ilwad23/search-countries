@@ -6,7 +6,7 @@ import Countries from "../components/Home/Countries";
 export default function Home({ countries }) {
 const [{filterValue,inputValue}, dispatch] = useStateValue()
   useEffect(() => {
-    dispatch({ type: "setCountries", countries: countries });
+    dispatch({ type: "setCountriesHome", countries: countries });
   }, [countries, dispatch, filterValue, inputValue]);
   return (
     <div className="home">

@@ -5,8 +5,9 @@
   padding: 25px 0;
   position: sticky;
   top: 0;
+  z-index: 999;
   @include border(0);
-  @include container;
+  @include container(v(80));
   @include flex;
   &__toggleContainer {
     border-radius: 100px;
@@ -32,7 +33,14 @@
     font-weight: 900;
   }
   &__lightText {
-    font-size: 14px;
+    font-size: 14px; 
     font-weight: 300;
+  }
+  @include small-screen {
+    @include container(v(30,750));
+    &__strongText {
+      font-size: 17px;
+      font-weight: 900;
+    }
   }
 }

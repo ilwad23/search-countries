@@ -4,15 +4,18 @@ $height: v(55);
   @include flex(flex-start);
   @include font-home-para;
   margin-top: $height;
-  height: $height;
+  // height: $height;
   ::placeholder {
     color: var(--input);
+  }
+  @include small-screen {
+    flex-direction: column
   }
 }
 .input {
   @include element;
   @include flex($justify: flex-end, $dir: row-reverse);
-  @include size($height, v(479));
+  @include size($height, 30vw);
   color: var(--input);
   &__icon {
     @include size(rem(17), rem(17));
@@ -34,12 +37,18 @@ $height: v(55);
       color: var(--text);
     }
   }
+  @include small-screen {
+    @include size(v(90), 100%);
+  background-color: wheat;
+  }
 }
-.filter{position: relative;}
+.filter {
+  position: relative;
+}
 .selector {
   @include element;
   @include flex($justify: space-around);
-  @include size($height, 199px);
+  @include size($height, 25vw);
   &__para {
     flex: 1;
     margin-left: 25px;

@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com"  />
-        {/*  eslint-disable-next-line @next/next/no-page-custom-font */}
+         {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
           href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap"
           rel="stylesheet"

@@ -13,7 +13,7 @@
   margin-bottom: v(75);
   &__img, img {
     @include size(168px, 100%);
-    object-fit: fill;
+    object-fit: cover;
   }
 
   &__content {
