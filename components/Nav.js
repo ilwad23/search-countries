@@ -14,7 +14,7 @@ function Nav() {
         <div className={NavStyles["nav__icon"]}>
           {toggle ? <MoonIcon /> : <SunIcon />}
         </div>
-        <p className={NavStyles["nav__light"]}>Dark Mode</p>
+        <p className={NavStyles["nav__light"]}>{toggle ? 'Dark' : 'Light'} Mode</p>
       </div>
     </div>
   );

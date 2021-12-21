@@ -1,11 +1,10 @@
-@use "../util" as *;
+@use "../../util" as *;
 $height: v(55);
 .tools {
   @include flex(flex-start);
   @include font-home-para;
   margin-top: $height;
   height: $height;
-  z-index: 111;
   ::placeholder {
     color: var(--input);
   }
@@ -36,6 +35,7 @@ $height: v(55);
     }
   }
 }
+.filter{position: relative;}
 .selector {
   @include element;
   @include flex($justify: space-around);

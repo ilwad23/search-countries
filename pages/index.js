@@ -1,18 +1,27 @@
-import Tools from "../components/Tools";
+import { useEffect } from "react";
+import Tools from "../components/Home/Tools";
+import { useStateValue } from "../states/StateProvider";
+import Countries from "../components/Home/Countries";
 
 export default function Home({ countries }) {
+const [{filterValue,inputValue}, dispatch] = useStateValue()
+  useEffect(() => {
+    dispatch({ type: "setCountries", countries: countries });
+  }, [countries, dispatch, filterValue, inputValue]);
   return (
     <div className="home">
-      <Tools/>
+      <Tools />
+      <Countries />
     </div>
   );
 }
 
-// export const getStaticProps = async () => {
-  // const res = await fetch("https://restcountries.com/v2/all");
-  // const countries = await res.json();
-  // console.log(countries[0]);
-  // return {
-  //   props: { countries },
-  // };
-// };
+export const getStaticProps = async () => {
+  const res = await fetch("https://restcountries.com/v2/all");
+  const countries = await res.json();
+
+  console.log(countries[0]);
+  return {
+    props: { countries },
+  };
+};

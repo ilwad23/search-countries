@@ -1,0 +1,36 @@
+@use "../../util" as *;
+
+.countries {
+  @include flex(flex-start);
+  flex-wrap: wrap;
+  margin-top: v(50);
+  z-index: -222;
+}
+
+.card {
+  @include element;
+  @include size(336px, 264px);
+  margin-bottom: v(75);
+  &__img, img {
+    @include size(168px, 100%);
+    object-fit: fill;
+  }
+
+  &__content {
+    margin: 25px;
+  }
+  &__title {
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 23px;
+    margin-bottom: 15px;
+  }
+  &__subtitle {
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  &__para {
+    font-weight: 300;
+    margin-left: 3px;
+  }
+}
