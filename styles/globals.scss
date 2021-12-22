@@ -20,7 +20,7 @@ body {
     --element: hsl(209, 23%, 22%);
   };
   background-color: var(--background);
-  @include size($height: 100vh);
+  @include size(100%, 100vw);
 }
 .main {
   padding-right: 15;

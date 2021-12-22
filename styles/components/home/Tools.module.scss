@@ -1,21 +1,26 @@
 @use "../../util" as *;
 $height: v(55);
+$height-ss:v(50,750);
 .tools {
   @include flex(flex-start);
   @include font-home-para;
   margin-top: $height;
-  // height: $height;
+  // position: relative;
+  height: $height;
   ::placeholder {
     color: var(--input);
   }
   @include small-screen {
-    flex-direction: column
+    flex-direction: column;
+    // margin-bot tom: $height-ss;
+    height: $height-ss;
+    height:auto ;
   }
 }
 .input {
   @include element;
   @include flex($justify: flex-end, $dir: row-reverse);
-  @include size($height, 30vw);
+  @include size($height, 35vw);
   color: var(--input);
   &__icon {
     @include size(rem(17), rem(17));
@@ -38,12 +43,16 @@ $height: v(55);
     }
   }
   @include small-screen {
-    @include size(v(90), 100%);
-  background-color: wheat;
+    @include size($height-ss, 100%);
+    margin-bottom: $height-ss ;
   }
 }
 .filter {
   position: relative;
+  @include small-screen {
+    @include size($height-ss, 40%);
+    // margin-bottom: $height-ss ;
+  }
 }
 .selector {
   @include element;
@@ -56,6 +65,9 @@ $height: v(55);
   &__icon {
     @include size(rem(14), rem(14));
     margin-right: 15px;
+  }
+  @include small-screen {
+    @include size(v(90), 100%);
   }
 }
 .list {

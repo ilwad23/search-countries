@@ -7,7 +7,7 @@ function Tools() {
   return (
     <div className={ToolsStyles.tools}>
       {Input()}
-      {Filter(["Africa", "America", "Asia", "Europe", "Oceania"])}
+      {Filter(["Africa", "Americas", "Asia", "Europe", "Oceania"])}
     </div>
   );
 }
