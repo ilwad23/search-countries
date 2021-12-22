@@ -59,7 +59,7 @@
 }
 
 @mixin element {
+  @include border;
     background-color: var(--element);
   color: var(--text);
-  @include border;
 }

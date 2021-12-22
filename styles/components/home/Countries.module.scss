@@ -3,11 +3,11 @@
   @include flex(flex-start);
   flex-wrap: wrap;
   margin-top: v(50);
-  
+
   @include small-screen {
     justify-content: center;
     gap: 75px;
-    margin-top: v(60,750);
+    margin-top: v(40, 750);
   }
 }
 
@@ -37,5 +37,13 @@
   &__para {
     font-weight: 300;
     margin-left: 3px;
+  }
+  @include small-screen {
+    @include size(75vw, 70vw);
+    &__img,
+    img {
+      height: 37.5vw;
+      min-height: max-content
+    }
   }
 }

@@ -1,20 +1,18 @@
 @use "../../util" as *;
 $height: v(55);
-$height-ss:v(50,750);
+$height-ss: v(55, 750);
 .tools {
   @include flex(flex-start);
   @include font-home-para;
-  margin-top: $height;
-  // position: relative;
+  margin-top: rem(55);
   height: $height;
   ::placeholder {
     color: var(--input);
   }
   @include small-screen {
     flex-direction: column;
-    // margin-bot tom: $height-ss;
     height: $height-ss;
-    height:auto ;
+    height: auto;
   }
 }
 .input {
@@ -24,8 +22,8 @@ $height-ss:v(50,750);
   color: var(--input);
   &__icon {
     @include size(rem(17), rem(17));
-    margin-left: v(30);
-    margin-right: v(25);
+    margin-left: 30px;
+    margin-right: 25px;
     .input__field:hover + &,
     .input__field:focus + &,
     .input__field:active + & {
@@ -43,23 +41,22 @@ $height-ss:v(50,750);
     }
   }
   @include small-screen {
-    @include size($height-ss, 100%);
-    margin-bottom: $height-ss ;
+    @include size(50px, 100%);
+    margin-bottom: $height-ss;
   }
 }
 .filter {
   position: relative;
   @include small-screen {
-    @include size($height-ss, 40%);
-    // margin-bottom: $height-ss ;
+    @include size(50px, v(396, 750));
   }
 }
 .selector {
   @include element;
   @include flex($justify: space-around);
-  @include size($height, 25vw);
+  @include size(50px, 20vw);
   &__para {
-    flex: 1;
+    flex: 1;    
     margin-left: 25px;
   }
   &__icon {
@@ -67,12 +64,12 @@ $height-ss:v(50,750);
     margin-right: 15px;
   }
   @include small-screen {
-    @include size(v(90), 100%);
+    @include size(50px, v(396, 750));
   }
 }
 .list {
   @include element;
-  @include size(172px, 199px);
+  @include size(172px, 20vw);
   display: none;
   margin-top: 6px;
   padding: 15px 25px;
@@ -92,5 +89,8 @@ $height-ss:v(50,750);
     &:active {
       font-weight: 600;
     }
+  }
+  @include small-screen {
+    width:  v(396, 750);
   }
 }
