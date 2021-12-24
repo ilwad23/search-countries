@@ -1,7 +1,9 @@
 @use "../../util" as *;
 .countries {
   @include flex(flex-start);
+  background-color: var(--background);
   flex-wrap: wrap;
+  height: 100vh;
   margin-top: v(50);
 
   @include small-screen {
@@ -14,6 +16,7 @@
 .card {
   @include element;
   @include size(336px, 264px);
+  cursor: pointer;
   margin-bottom: v(75);
   &__img,
   img {
@@ -43,7 +46,7 @@
     &__img,
     img {
       height: 37.5vw;
-      min-height: max-content
+      min-height: max-content;
     }
   }
 }

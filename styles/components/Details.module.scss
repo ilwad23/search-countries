@@ -1,0 +1,77 @@
+@use "../util" as *;
+
+.details {
+  color: var(--text);
+  font-size: 16px;
+  height: 100vh;
+  &__backBtn {
+    @include element;
+    @include flex($justify: center);
+    cursor: pointer;
+    margin: 80px 0;
+    padding: 10px 30px;
+    width: max-content;
+  }
+  &__backIcon {
+    @include center-div;
+    @include size(100%, 32px);
+    padding-right: 5px;
+  }
+  &__main {
+    @include flex;
+  }
+  &__img,
+  img {
+    @include size(v(400), v(555));
+    background-color: #c4c4c4;
+    margin-right: v(180);
+    object-fit: cover;
+  }
+  &__content {
+    width: 50vw;
+    margin-right: 15px;
+  }
+  &__title {
+    font-weight: 800;
+    font-size: 29px;
+    line-height: 40px;
+    margin-bottom: 30px;
+  }
+  &__separator {
+    @include flex(flex-start);
+  }
+  &__info:first-child {
+    flex: 1;
+  }
+  &__subtitle,
+  &__borderText {
+    font-weight: 600;
+  }
+  &__subtitle {
+    margin-bottom: 10px;
+  }
+  &__para {
+    font-weight: 300;
+    margin-left: 3px;
+  }
+  &__borders,
+  &__borderBtns {
+    @include flex($justify: flex-start);
+  }
+  &__borders {
+    margin-top: 75px;
+  }
+  &__borderText {
+    margin-right: 20px;
+  }
+  &__borderBtns {
+    flex-wrap: wrap;
+    margin-right: 10px;
+  }
+  &__borderBtn {
+    @include element;
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 3px 20px;
+  }
+}

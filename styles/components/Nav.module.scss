@@ -10,6 +10,7 @@
   @include container(v(80));
   @include flex;
   &__toggleContainer {
+    cursor: pointer;
     border-radius: 100px;
     padding: 10px 20px;
     @include flex;
@@ -29,6 +30,7 @@
     width: v(14);
   }
   &__strongText {
+    cursor: pointer;
     font-size: 23px;
     font-weight: 900;
   }
