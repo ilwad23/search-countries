@@ -4,7 +4,6 @@ import { useStateValue } from "../states/StateProvider";
 import Countries from "../components/Home/Countries";
 
 export default function Home({ countries }) {
-  (countries.forEach(v=>console.log(v)));
   const [{ filterValue, inputValue }, dispatch] = useStateValue();
   useEffect(() => {
     dispatch({ type: "setCountriesHome", countries: countries });
