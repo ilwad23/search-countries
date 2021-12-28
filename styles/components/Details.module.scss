@@ -23,7 +23,7 @@
     @include size(100%, 38vw);
     background-color: #c4c4c4;
     margin-right: v(100);
-    object-fit: fill;
+    object-fit: cover;
   }
 
   &__title {

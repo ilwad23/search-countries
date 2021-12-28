@@ -19,9 +19,9 @@ $height-ss: v(55, 750);
   @include element;
   @include flex($justify: flex-end, $dir: row-reverse);
   @include size($height, 35vw);
-  color: var(--input);
   &__icon {
     @include size(rem(17), rem(17));
+    color: var(--input);
     margin-left: 30px;
     margin-right: 25px;
     .input__field:hover + &,
@@ -31,9 +31,10 @@ $height-ss: v(55, 750);
     }
   }
   .input__field {
-    background-color: transparent;
-    flex: 1;
     @include size($height: 100%);
+    background-color: transparent;
+    color:var(--input);
+    flex: 1;
     &:hover,
     &:focus,
     &:active {

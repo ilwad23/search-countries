@@ -2,32 +2,34 @@
 @use "./reset";
 
 body {
-  color: var(--text);
-  font-family: 'Nunito', sans-serif;
+  // color: var(--text);
+  font-family: "Nunito", sans-serif;
   font-style: normal;
-  }
+  // background-color: var(--text);
+height: 100%;
+}
 .container {
   &--light {
-    --background:hsl(0, 0%, 98%);
+    --background: hsl(0, 0%, 98%);
     --text: hsl(200, 15%, 8%);
     --input: hsl(0, 0%, 52%);
     --element: hsl(0, 0%, 100%);
-  };
+  }
   &--dark {
-    --background:hsl(207, 26%, 17%);
-    --text:  hsl(0, 0%, 100%);
+    --background: hsl(207, 26%, 17%);
+    --text: hsl(0, 0%, 100%);
     --input: hsl(0, 0%, 100%);
     --element: hsl(209, 23%, 22%);
-  };
+  }
   background-color: var(--background);
   @include size(100%, 100vw);
+  min-height: 100vh
 }
 .main {
-  padding-right: 15;
   @include container(v(80));
   @include font-home-para;
+  padding-right: 15;
   @include small-screen {
     @include container(v(30));
-    
   }
 }

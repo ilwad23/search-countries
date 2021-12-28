@@ -1,9 +1,7 @@
 @use "../../util" as *;
 .countries {
   @include flex(flex-start);
-  background-color: var(--background);
   flex-wrap: wrap;
-  height: 100vh;
   margin-top: v(50);
 
   @include small-screen {
