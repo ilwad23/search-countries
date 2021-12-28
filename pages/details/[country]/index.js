@@ -6,19 +6,21 @@ import Link from "next/link";
 const Details = ({ country }) => {
   const {
     flag,
-    name,
-    nativeName,
-    population,
-    region,
-    subregion,
-    capital,
-    topLevelDomain,
-    languages,
-    currencies,
+    name='No Country Name',
+    nativeName='N/A',
+    population='N/A',
+    region='N/A',
+    subregion='N/A',
+    capital='N/A',
+    topLevelDomain='N/A',
+    languages='N/A',
+    currencies='N/A',
     borders,
   } = country[0];
-  const strLanguages = languages.map((language) => language.name).join(", ");
-  const strCurrencies = currencies.map((currency) => currency.name).join(", ");
+  const strLanguages =
+    languages == "N/A" ?'N/A':
+    languages.map((language) => language.name).join(", ");
+  const strCurrencies = currencies=='N/A'?'N/A': currencies.map((currency) => currency.name).join(", ");
   return (
     <div className={DetailsStyles["details"]}>
       <Link href="/">
