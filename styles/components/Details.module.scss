@@ -2,76 +2,106 @@
 
 .details {
   color: var(--text);
-  font-size: 16px;
+  font-size: rem(16);
   height: 100vh;
   &__backBtn {
     @include element;
     @include flex($justify: center);
     cursor: pointer;
-    margin: 80px 0;
-    padding: 10px 30px;
+    margin: rem(80) 0;
+    padding: rem(10) rem(30);
     width: max-content;
   }
   &__backIcon {
     @include center-div;
-    @include size(100%, 32px);
-    padding-right: 5px;
+    @include size(100%, rem(32));
+    padding-right: rem(5);
   }
-  &__main {
-    @include flex;
-  }
+
   &__img,
   img {
-    @include size(v(400), v(555));
+    @include size(100%, 38vw);
     background-color: #c4c4c4;
-    margin-right: v(180);
-    object-fit: cover;
+    margin-right: v(100);
+    object-fit: fill;
   }
-  &__content {
-    width: 50vw;
-    margin-right: 15px;
-  }
+
   &__title {
     font-weight: 800;
-    font-size: 29px;
-    line-height: 40px;
-    margin-bottom: 30px;
+    font-size: rem(29);
+    line-height: rem(40);
+    margin-bottom: 2rem;
   }
-  &__separator {
-    @include flex(flex-start);
-  }
-  &__info:first-child {
-    flex: 1;
-  }
+
   &__subtitle,
   &__borderText {
     font-weight: 600;
   }
   &__subtitle {
-    margin-bottom: 10px;
+    margin-bottom: rem(10);
   }
   &__para {
     font-weight: 300;
-    margin-left: 3px;
+    margin-left: rem(3);
   }
   &__borders,
   &__borderBtns {
     @include flex($justify: flex-start);
   }
-  &__borders {
-    margin-top: 75px;
-  }
+
   &__borderText {
-    margin-right: 20px;
+    margin-right: rem(20);
   }
   &__borderBtns {
     flex-wrap: wrap;
-    margin-right: 10px;
+    margin-right: rem(10);
   }
   &__borderBtn {
     @include element;
     cursor: pointer;
-    margin-right: 10px;
-    padding: 3px 20px;
+    margin-right: rem(10);
+    padding: rem(3) rem(20);
+  }
+
+  @include big-screen {
+    &__main {
+      @include flex;
+      height: 30vw;
+      min-height: 30vh;
+    }
+    &__content {
+      width: 50vw;
+      margin-right: rem(15);
+    }
+    &__separator {
+      @include flex(flex-start);
+    }
+    &__info:first-child {
+      flex: 1;
+      margin-right: rem(10);
+    }
+    &__borders {
+      margin-top: v(75);
+    }
+  }
+  @include small-screen {
+    &__backBtn {
+      margin-bottom: rem(36);
+    }
+    &__main {
+      height: auto;
+      min-height: auto;
+    }
+    &__img,
+    img {
+      @include size(v(280, 750), 100%);
+      margin-bottom: rem(36);
+    }
+    &__info:first-child {
+      margin-bottom: rem(30);
+    }
+    &__borders {
+      margin-top: rem(40);
+    }
   }
 }

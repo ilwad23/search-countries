@@ -26,6 +26,11 @@
     @content;
   }
 }
+@mixin big-screen {
+  @media all and (min-width: 751px) {
+    @content;
+  }
+}
 @mixin small-screen {
   @media all and (max-width: 750px) {
     @content;
