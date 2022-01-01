@@ -2,7 +2,7 @@
 .nav {
   background-color: var(--element);
   color: var(--text);
-  padding: 25px 0;
+  padding: rem(25) 0;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -11,8 +11,8 @@
   @include flex;
   &__toggleContainer {
     cursor: pointer;
-    border-radius: 100px;
-    padding: 10px 20px;
+    border-radius: rem(100);
+    padding: rem(10) rem(20);
     @include flex;
     &:hover,
     &:focus,
@@ -23,25 +23,25 @@
   &__icon {
     align-self: start;
     font-size: 600;
-    margin-right: 10px;
-    min-height: 14px;
+    margin-right: rem(10);
+    min-height: rem(14);
     height: v(14);
-    min-width: 14px;
+    min-width: rem(14);
     width: v(14);
   }
   &__strongText {
     cursor: pointer;
-    font-size: 23px;
+    font-size: rem(23);
     font-weight: 900;
   }
   &__lightText {
-    font-size: 14px; 
+    font-size: rem(14); 
     font-weight: 300;
   }
   @include small-screen {
     @include container(v(30,750));
     &__strongText {
-      font-size: 17px;
+      font-size: rem(17);
       font-weight: 900;
     }
   }

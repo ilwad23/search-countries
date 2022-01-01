@@ -6,44 +6,44 @@
 
   @include small-screen {
     justify-content: center;
-    gap: 75px;
+    gap: rem(75);
     margin-top: v(40, 750);
   }
 }
 
 .card {
   @include element;
-  @include size(336, 264px);
+  @include size(336, rem(264));
 
   cursor: pointer;
   margin-bottom: v(50);
   &__img,
   img {
     background-color: #c4c4c4;
-    @include size(168px, 100%);
+    @include size(rem(168), 100%);
     object-fit: cover;
   }
 
   &__content {
-    margin: 25px;
+    margin: rem(25);
   }
   &__title {
     font-weight: 800;
-    font-size: 17px;
-    line-height: 23px;
-    margin-bottom: 15px;
+    font-size: rem(17);
+    line-height: rem(23);
+    margin-bottom: rem(15);
   }
   &__subtitle {
     font-weight: 600;
-    margin-bottom: 5px;
+    margin-bottom: rem(5);
   }
   &__para {
     font-weight: 300;
-    margin-left: 3px;
+    margin-left: rem(3);
   }
   @include small-screen {
     @include size(80vw, 70vw);
-    margin-bottom: 50px;
+    margin-bottom: rem(50);
     &__img,
     img {
       height: 40vw;
