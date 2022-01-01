@@ -3,10 +3,8 @@
   @include flex(flex-start);
   flex-wrap: wrap;
   margin-top: v(50);
-
   @include small-screen {
     justify-content: center;
-    gap: rem(75);
     margin-top: v(40, 750);
   }
 }
@@ -14,7 +12,6 @@
 .card {
   @include element;
   @include size(336, rem(264));
-
   cursor: pointer;
   margin-bottom: v(50);
   &__img,
@@ -42,8 +39,8 @@
     margin-left: rem(3);
   }
   @include small-screen {
-    @include size(80vw, 70vw);
-    margin-bottom: rem(50);
+    @include size(85vw, 70vw);
+    margin-bottom: v(55, 750);
     &__img,
     img {
       height: 40vw;
