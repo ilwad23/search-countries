@@ -13,11 +13,13 @@
 
 .card {
   @include element;
-  @include size(336px, 264px);
+  @include size(336, 264px);
+
   cursor: pointer;
-  margin-bottom: v(75);
+  margin-bottom: v(50);
   &__img,
   img {
+    background-color: #c4c4c4;
     @include size(168px, 100%);
     object-fit: cover;
   }
@@ -40,11 +42,11 @@
     margin-left: 3px;
   }
   @include small-screen {
-    @include size(75vw, 70vw);
+    @include size(80vw, 70vw);
+    margin-bottom: 50px;
     &__img,
     img {
-      height: 37.5vw;
-      min-height: max-content;
+      height: 40vw;
     }
   }
 }
